@@ -33,16 +33,16 @@ In this unit, we cover:
 
 ### Unit 2 Recording
 
-<iframe 
-    style="width: 100%; height: 100%; border: none;
-    aspect-ratio: 16/9; border-radius: 1rem; background:black"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+<iframe  
+    src="https://www.youtube.com/embed/miVuSoHTuP4?si=9swKZSbFG0PvVp51"
+    style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black"
     title="Unit 2 Recording - ProLUG Linux Systems Administration Course - Free in Discord"
     frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen>
 </iframe>
+
 
 ---
 
@@ -58,6 +58,11 @@ Think about how week 1 went for you.
 
 3.	How well did you take notes during the lecture? Do you need to improve this?  
  
+<div class="warning">
+Submit your input by following the link below:
+</div>
+
+- [Link to Discussion Post 1](https://discord.com/channels/611027490848374811/1098309490681598072/1287087938806743121)
 
 #### Unit 2 Discussion Post 2 
 Read a blog, check a search engine, or ask an AI about SELINUX.  
@@ -72,8 +77,20 @@ They cannot access just one (1) of the servers.
 When you review the differences in the servers you see that the server they cannot access is running SELINUX.  
 On checking other users have no problem getting into the system.  
 You find nothing in the documentation (typical) about this different system or how these users are accessing it.  
+
 What do you do?  
-Where do you check? (you may use any online resources to help you answer this. This is not a trick and it is not a “one answer solution”.  This is for you to think through.)  
+Where do you check? 
+<div class="warning">
+You may use any online resources to help you answer this.  
+This is not a trick and it is not a “one answer solution”.  
+This is for you to think through.  
+</div>
+
+<div class="warning">
+Submit your input by following the link below:
+</div>
+
+- [Link to Discussion Post 1](https://discord.com/channels/611027490848374811/1098309490681598072/1287088271096025239)
 
 
 ---

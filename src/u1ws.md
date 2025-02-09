@@ -48,37 +48,45 @@ knowledge.
 
 #### Discussion Post #1
 
-Scan the chapter here <https://google.github.io/building-secure-and-reliable-systems/raw/ch17.html>
-for keywords and pull out what you think will help you to better understand how to triage an incident.
+Using a 0-10 system, rate yourself on how well you think you know each topic in the image. (You do not have to post this rating).
 
-Read the section called “Operation Security” in this same chapter: <https://google.github.io/building-secure-and-reliable-systems/raw/ch17.html>
-what important concepts do you learn about how we behave during an operational response to an incident?
+1. Answer these questions (here):
+
+2. What do you hope to learn in this course?
+
+3. What type of career path are you shooting for?
+
+<img src="./assets/images/selfassessment.png"></img>
 
 <div class="warning">
 Submit your input by following the link below:
 </div>
 
-- [Link to Discussion Post 1](https://discord.com/channels/611027490848374811/1320140773412438091)
+- [Link to Discussion Post 1](Placeholder)
 
 #### Discussion Post #2
 
-Sys Admin Book Style Guide Handout 2 Page 2 of 8
-Ask google, find a blog, or ask an AI about high availability. (Here’s one if you need it: <https://docs.aws.amazon.com/pdfs/whitepapers/latest/real-time-communication-on-aws/real-time-communication-on-aws.pdf#high-availability-and-scalability-on-aws>)
+1. Post a job that you are interested in from a local job website. (link or image)
 
-What are some important terms you read about?
-Why do you think understanding HA will help you better in the context of triaging incidents?
+2. What do you know how to do in the posting?
+
+3. What don't you know how to do in the posting?
+
+4. What are you doing to close the gap? What can you do to remedy the difference?
 
 <div class="warning">
 Submit your input by following the link below:
 </div>
 
-- [Link to Discussion Post 2](https://discord.com/channels/611027490848374811/1320140773412438091)
+- [Link to Discussion Post 2](Placeholder)
 
 <hr>
 
 ## Definitions
 
 Kernel:
+
+Kernel Args:
 
 OS Version:
 
@@ -97,6 +105,7 @@ Text Editor:
 2. Go to <https://vim-adventures.com/> and see how far you get. What did you learn that you did not already know about vi/vim?
 
 3. Go to <https://www.youtube.com/watch?v=d8XtNXutVto> and see how far you get with vim. What did you learn that you did not already know about vi/vim?
+
 
 <hr>
 

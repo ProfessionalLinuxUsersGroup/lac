@@ -23,7 +23,7 @@ and implementing an incident response cycle for triage events.
 
 - Operations Bridge: <https://cio-wiki.org/wiki/Operations_Bridge>
 - Security Incident Cheatsheet: <https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf?msc=Cheat+Sheet+Blog>
-- Battle Drills: <https://cio-wiki.org/wiki/Operations_Bridge>
+- Battle Drills: <https://en.wikipedia.org/wiki/Battle_drill>
 
 ### Unit 4 Recording
 
@@ -109,7 +109,7 @@ Operations Bridge:
 
 ---
 
-1. Read about battle drills here (https://en.wikipedia.org/wiki/Battle_drill)
+1. Read about battle drills here <https://en.wikipedia.org/wiki/Battle_drill>
 
 2. Why might it be important to practice incident handling before an incident occurs?
 

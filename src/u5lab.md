@@ -9,7 +9,7 @@
     </p>
 </div>
 
---- 
+
 ## Intro
 The Unit 5 lab covers user and group management on Linux systems.  
 
@@ -134,13 +134,13 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
   We cannot allow these to be read by just anyone because then they could brute force 
   and try to figure out our passwords.
 
-    ### Creating and modifying local users:
-    We should take a second to note that the systems you're using are tied into our active directory with
-    Kerberos. You will not be seeing your account in `/etc/passwd`, as that authentication is occurring
-    remotely. You can, however, run `id <username>` to see user information about yourself that you have
-    according to active directory.
-    Your `/etc/login.defs` file is default and contains a lot of the values that control how our next commands
-    work
+### Creating and modifying local users:
+We should take a second to note that the systems you're using are tied into our active directory with
+Kerberos. You will not be seeing your account in `/etc/passwd`, as that authentication is occurring
+remotely. You can, however, run `id <username>` to see user information about yourself that you have
+according to active directory.
+Your `/etc/login.defs` file is default and contains a lot of the values that control how our next commands
+work
 
 5. Creating users
    ```bash

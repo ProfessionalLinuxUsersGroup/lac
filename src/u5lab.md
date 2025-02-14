@@ -24,10 +24,13 @@ This lab will take you through the basics of:
 - [This is an external link to genome.gov](https://www.genome.gov/)
 - [This is an external link to genome.gov](https://www.genome.gov/)
 --- 
+
 ## Required Materials
 - Rocky 9.3 – ProLUG Lab
 - root or sudo command access
+
 ---
+
 ## Begin 
 ### Pre-Lab Warm-Up
 
@@ -182,7 +185,7 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
    ```bash
    useradd user4
    su - user4
-   dinosaur #should roar out to the screen
+   dinosaur # Should roar out to the screen
    ```
 
    Doing that changed the `.bashrc` file for all new users that have home directories created on the server.
@@ -194,17 +197,17 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
    Pick an existing user and verify they don't have that command
    ```bash
    su – user1
-   dinosaur #command not found
+   dinosaur # Command not found
    exit
    ```
    Then, as root:
    ```bash
    cd /home/user1
    mkdir old_dot_files
-   mv .* old_dot_files #ignore the errors, those are directories
-   cp /etc/skel/.* /home/user1 #ignore the errors, those are directories
+   mv .* old_dot_files          # Ignore the errors, those are directories
+   cp /etc/skel/.* /home/user1  # Ignore the errors, those are directories
    su – user1
-   dinosaur #should roar now because the .bashrc file is new from /etc/skel
+   dinosaur # Should 'roar' now because the .bashrc file is new from /etc/skel
    ```
 
 6. Creating groups
@@ -232,7 +235,7 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
     * Hit `Esc`
     * `:wq!` to write quit the file explicit force because it's a read only file.  
    ```bash
-   id user 4 #Should now see the project2 in the user's groups
+   id user 4 # Should now see the project2 in the user's groups
    ```
   
 
@@ -240,7 +243,7 @@ how they secure the system. The four files are `/etc/passwd`, `/etc/group`, `/et
    So maybe now we need to move our users into that group.
    ```bash
    usermod –G project user4
-   tail –f /etc/group #Should see user4 in the group
+   tail –f /etc/group # Should see user4 in the group
    ```
    But, maybe we want to add more users and we want to just put them in there:
    ```bash

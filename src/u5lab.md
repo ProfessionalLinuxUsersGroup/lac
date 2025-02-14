@@ -11,7 +11,13 @@
 
 --- 
 ## Intro
-1 paragraph or less intro to topic
+The Unit 5 lab covers user and group management on Linux systems.  
+
+This lab will take you through the basics of:
+- Managing users and groups
+- Key files related to users and group management (the shadow password suite)
+- How permissions work
+
 ---
 ### Resources / Important Links
 - [This is an external link to genome.gov](https://www.genome.gov/)

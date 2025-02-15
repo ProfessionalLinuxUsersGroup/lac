@@ -20,9 +20,10 @@ This lab will take you through the basics of:
 
 ---
 ### Resources / Important Links
-- [This is an external link to genome.gov](https://www.genome.gov/)
-- [This is an external link to genome.gov](https://www.genome.gov/)
-- [This is an external link to genome.gov](https://www.genome.gov/)
+* [RedHat: User and Group Management](https://www.redhat.com/en/blog/linux-user-group-management)
+* [Rocky Linux User Admin Guide](https://docs.rockylinux.org/books/admin_guide/06-users/)
+* [Killercoda lab by FishermanGuyBro](https://killercoda.com/fishermanguybro)
+
 --- 
 
 ## Required Materials

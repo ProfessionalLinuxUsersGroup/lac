@@ -21,7 +21,7 @@ The ProLUG Linux Administration Course (LAC) utilizes [mdBook](https://github.co
 (markdown Book), a friendly and popular markdown utility that quickly exports
 files and web structures for documentation or general website use cases.
 
-Utilizing mdBook, this course then deploys the exported web structure to a
+Utilizing mdBook this course then deploys the exported web structure to a
 [Git Pages workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and runner that then produces an easily navigable website.
 
 Below is the current workflow that deploys the Git Page for the course:
@@ -78,12 +78,12 @@ Export and execute this script to your machine/container.
 Dependencies can total over ~500MB compressed and 2GB unpackaged or more.
 
 Debian containers/machines will require building many of these packages from
-source as Debian has a far slower package version adoption rate for stability
-thus not recommended for deploying mdBook.
+source or adding additional repositories as Debian has a far slower package
+version adoption rate for stability, thus is not recommended for deploying mdBook.
 
 </div>
 
-These scripts will take up to 10 minutes to download the necessary dependencies
+These scripts will take up to 5-7 minutes to download the necessary dependencies
 and compile mdBook depending on the machine/container's capabilities.
 
 Tested with Rocky 9 and Ubuntu 24.04 Containers.

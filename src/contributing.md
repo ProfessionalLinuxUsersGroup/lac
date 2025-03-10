@@ -24,12 +24,13 @@ version control environment.
   - [Commit and Push your Changes](#commit-and-push-your-changes)
   - [Comment your Changes](#comment-your-changes)
   - [Create a Pull Request](#create-a-pull-request)
+- [Supporting Material](#supporting-material)
 
 ## How to be a Successful Contributor
 
 ---
 
-To be an effective contributor, understanding [Git](https://git-scm.com/), whether
+To be an effective contributor understanding [Git](https://git-scm.com/), whether
 through the command line or an external tool, will be an important part of contributing.
 To this effect it is important that any individual who contributes to this project have
 a working understanding of committing, merging, and other fundamental Git workflows.
@@ -287,6 +288,12 @@ Select your branch `unit1-worksheet`, and create a description and mention an is
 ---
 
 Below are links to the necessary materials to build out the course templates:
+
+- Look over the [template pages wiki](https://github.com/ProfessionalLinuxUsersGroup/lac/wiki), or directly here:
+  - Pages: [intro](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/intro.md),
+    [bonus](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ub.md),
+    [lab](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/ulab.md),
+    [worksheet](https://github.com/ProfessionalLinuxUsersGroup/lac/blob/main/ref/uws.md)
 
 Ancillary unit videos provided by Scott:
 

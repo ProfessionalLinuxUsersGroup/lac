@@ -9,7 +9,11 @@ Welcome to the ProLUG Enterprise Linux System Administration Course Book.
 
 ## This Book
 
-Contains all materials pertaining to the course including links to external resources. It has been put together with care by a number of ProLUG group members referencing original instructional materials produce by Scott Champine (Het Tanis). The content is version controlled with Git and stored - [Link to Repository](https://github.com/ProfessionalLinuxUsersGroup/lac/)
+Contains all materials pertaining to the course including links to external resources.
+It has been put together with care by a number of ProLUG group members referencing original
+instructional materials produce by Scott Champine (Het Tanis). The content is version
+controlled with Git and stored - [ProLUG Linux Administration Course (LAC) Repository](https://github.com/ProfessionalLinuxUsersGroup/lac/)
+
 Furthermore, the book has been built with mdbook for ease of navigation. Be sure to try the search functionality.
 
 ## This Course
@@ -57,7 +61,7 @@ effectively applied in professional contexts.
 
 ### Written Discussions
 
-Are assigned as 'Discussion Posts' within each unit. Disucssions generally take place within the Discord Server under #ProLUG Projects. More specifically, each unit will contain links to particular discussion posts within #ProLUG Projects.
+Are assigned as 'Discussion Posts' within each unit. Discussions generally take place within the Discord Server under #ProLUG Projects. More specifically, each unit will contain links to particular discussion posts within #ProLUG Projects.
 
 ## Completing the course
 
@@ -65,7 +69,7 @@ In order to complete this course, one must attend lectures, participate in group
 
 ## Recommended extras
 
-[[Link to Killercoda](https://killercoda.com/)]
+[Link to Killercoda](https://killercoda.com/)
 
 ## Required Resources
 

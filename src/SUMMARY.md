@@ -2,6 +2,7 @@
 
 - [Intro](./intro.md)
 - [About ProLUG](./prolug.md)
+- [Final Project Outline](./project.md)
 - [Unit 1](./u1intro.md)
   - [Work Sheet](./u1ws.md)
   - [Lab](./u1lab.md)

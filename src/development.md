@@ -95,7 +95,7 @@ Tested with Rocky 9 and Ubuntu 24.04 Containers.
 APT frontends:
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 apt-get update
 apt-get -y install apache2 git gcc rustc-1.80 cargo-1.80
 cargo-1.80 install --locked mdbook
@@ -110,7 +110,7 @@ systemctl restart apache2
 DNF frontends:
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 dnf update
 dnf install -y httpd git gcc rust cargo
 cargo install --locked mdbook
@@ -143,14 +143,14 @@ these commands will need to utilize absolute paths.
 
 ```bash
 scp {working directory}/{targeted document} {TARGET_IP}:/root/lac/src/{targeted document}
-ssh {TARGET_IP} "cd ~/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh {TARGET_IP} "cd /root/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 An example of the workflow after making changes:
 
 ```bash
 scp src/development.md 172.16.15.8:/root/lac/src/
-ssh 172.16.15.8 "cd ~/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh 172.16.15.8 "cd /root/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 <img src="./assets/images/flow.png"></img>

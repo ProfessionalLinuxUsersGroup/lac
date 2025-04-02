@@ -17,6 +17,11 @@ learn offers no better teacher. Again welcome, and good luck in your studies.
 - [The Linux Foundation](https://www.linux.org/pages/download/)
 - [Linux CLI Cheatsheets](https://www.digitalocean.com/community/tutorials/linux-commands)
 
+To qualify for the ProLUG certification, download, fill out, and save the desired worksheet format:
+
+- <a href="./assets/downloads/u1/u1_worksheet.txt" target="_blank" download>📥 u1_worksheet(`.txt`)</a>
+- <a href="./assets/downloads/u1/u1_worksheet.docx" target="_blank" download>📥 u1_worksheet(`.docx`)</a>
+
 ### Unit 1 Recording
 
 <iframe
@@ -124,7 +129,3 @@ Text Editor:
 1. What questions do you still have about this week?
 
 2. How are you going to use what you’ve learned in your current role?
- 
-## Downloads
-#### - <a href="./assets/downloads/u1/u1_worksheet.txt" target="_blank" download>📥 Download (`.txt`)</a>
-#### - <a href="./assets/downloads/u1/u1_worksheet.docx" target="_blank" download>📥 Download (`.docx`)</a>

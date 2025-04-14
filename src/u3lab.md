@@ -5,12 +5,8 @@
     </p>
 </div>
 
-<blockquote>
-
-If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-the machine from the command line so that other students will have the intended environment.
-
-</blockquote>
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -490,8 +486,4 @@ Can you use the internet/man pages/or other documentation to take this raid down
 
 Can you document your steps so that you or others could come back and do this process again?
 
-<blockquote>
-
-Be sure to `reboot` the lab machine from the command line when you are done.
-
-</blockquote>
+> Be sure to `reboot` the lab machine from the command line when you are done.

@@ -5,18 +5,17 @@
     </p>
 </div>
 
-# THIS IS A TEMPLATE DOCUMENT
+## THIS IS A TEMPLATE DOCUMENT
 
 (However, these are not hard fast templates, as long as the style is maintained
 there is a degree of freedom.)
 
-### Introduction
+<blockquote>
 
-(Should contain content directly related to the unit and lab)
+If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+the machine from the command line so that other students will have the intended environment.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat.
+</blockquote>
 
 ### Resources / Important Links
 
@@ -28,8 +27,16 @@ laboris nisi ut aliquip ex ea commodo consequat.
 
 ### Required Materials
 
-- Rocky 9+ Machine, Container, or Lab
+- Rocky 9.4+ - ProLUG Lab
+  - Or comparable Linux box
 - root or sudo command access
+
+#### Downloads
+
+The lab has been provided for convenience below:
+
+- <a href="./assets/downloads/u/u_lab.pdf" target="_blank" download>📥 u_lab(`.pdf`)</a>
+- <a href="./assets/downloads/u/u_lab.docx" target="_blank" download>📥 u_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
 
@@ -58,3 +65,9 @@ Step 2:
 Code block:
 
 etc..
+
+<blockquote>
+
+Be sure to `reboot` the lab machine from the command line when you are done.
+
+</blockquote>

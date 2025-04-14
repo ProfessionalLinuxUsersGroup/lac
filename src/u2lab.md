@@ -5,12 +5,8 @@
     </p>
 </div>
 
-<blockquote>
-
-If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-the machine from the command line so that other students will have the intended environment.
-
-</blockquote>
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -241,8 +237,4 @@ for i in `seq 1 20`; do echo "I am counting i and am on $i times through the loo
 
 Can you tell me what is the difference or significance of the $ in the command above? What does that denote to the system?
 
-<blockquote>
-
-Be sure to `reboot` the lab machine from the command line when you are done.
-
-</blockquote>
+> Be sure to `reboot` the lab machine from the command line when you are done.

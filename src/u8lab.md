@@ -1,6 +1,3 @@
-<head>
-    <style> .flex-container { display: flex; align-items: center; gap: 20px; } </style>
-</head>
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64">
     <p>
@@ -8,12 +5,8 @@
     </p>
 </div>
 
-<blockquote>
-
-If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
-the machine from the command line so that other students will have the intended environment.
-
-</blockquote>
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
 
 ### Resources / Important Links
 
@@ -443,14 +436,4 @@ run the command\
 
 to see what is happening with your system when it interprets this script.
 
-## Conclusion
-
-There are a lot of ways to use these tools. There are a lot of things you can do and include with scripts. This is just meant to teach you the basics and give you some confidence that you can go out there and figure out the rest. You can develop things that solve your own problems or automate your own tasks.
-
-There’s a lot of interesting things going on in that page that you’ll see. It’s outside the scope of this lab, but you can start to see what libraries your program is using and where memory is mapped to. People will use a simple bash shell execution and exit inside a simple c program like this to figure out where those are mapped in memory on a system to work to escalate privileges.
-
-<blockquote>
-
-Be sure to `reboot` the lab machine from the command line when you are done.
-
-</blockquote>
+> There are a lot of ways to use these tools. There are a lot of things you can do and include with scripts. This is just meant to teach you the basics and give you some confidence that you can go out there and figure out the rest. You can develop things that solve your own problems or automate your own tasks.

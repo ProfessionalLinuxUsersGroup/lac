@@ -8,13 +8,27 @@
 (However, these are not hard fast templates, as long as the style is maintained
 there is a degree of freedom. We are using `prettier` for formatting.)
 
-PLACEHOLDER - Unit Introduction. A few sentences/single paragraph describing what the topic of the unit is and why it is beneficial.
+## Instructions
+
+---
+
+Fill out the worksheet as you progress through the lab and discussions.
+Hold your worksheets until the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
-- [PLACEHOLDER](PLACEHOLDER) - Resources will go in unordered lists
+- [PLACEHOLDER]()
+- [PLACEHOLDER]()
+- [PLACEHOLDER]()
 
-- [PLACEHOLDER](PLACEHOLDER)
+#### Downloads
+
+The worksheet has been provided below. The document(s) can be transposed to
+the desired format so long as the content is preserved. For example, the `.txt`
+could be transposed to a `.md` file.
+
+- <a href="./assets/downloads/u/u_worksheet.txt" target="_blank" download>📥 u_worksheet(`.txt`)</a>
+- <a href="./assets/downloads/u/u_worksheet.docx" target="_blank" download>📥 u_worksheet(`.docx`)</a>
 
 ### Unit N Recording
 
@@ -28,23 +42,6 @@ PLACEHOLDER - Unit Introduction. A few sentences/single paragraph describing wha
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
-
-## Instructions
-
----
-
-<!-- The instructions are the same for all worksheets. -->
-
-A major aspect of this course is to intake, comprehend, and discuss the assigned
-topics. Take the time to fully absorb each topic and contribute to the
-discussion thread by sharing your thoughts. Interaction with peers is also
-expected; the goal is to compare and contrast ideas to build a solid
-foundation of knowledge.
-
-Fill out this worksheet as you watch the unit video.  
-Discussion posts can be completed afterwards, answers to be posted in Discord.
-You must both answer the discussion questions and respond to another student's
-answers. This is only required if you want the certification.
 
 #### Discussion Post #1
 
@@ -68,6 +65,7 @@ PLACEHOLDER - Scenarios go inside block quotes.
 Submit your input by following the link below:
 
 The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
+
 </div>
 
 - [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)

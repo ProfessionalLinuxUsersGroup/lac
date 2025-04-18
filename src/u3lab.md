@@ -217,8 +217,11 @@ Logical volume "lv_test" created.
 
 LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert
 lv_test VolGroupTest -wi-a----- <8.99g
+```
+
 Formatting and mounting the filesystem
 
+```bash
 [root@ROCKY1 ~]mkfs.ext4 /dev/mapper/VolGroupTest-lv_test
 
 mke2fs 1.42.9 (28-Dec-2013)
@@ -247,6 +250,9 @@ Writing superblocks and filesystem accounting information: done
 
 # Add the following line
 /dev/mapper/VolGroupTest-lv_test /space ext4 defaults 0 0
+
+# reload fstab
+systemctl daemon-reload
 
 [root@ROCKY1 ~]mount -a
 ```
@@ -297,11 +303,11 @@ Logical volume "lv_test" successfully removed
 
 Volume group "VolGroupTest" successfully removed
 
-[root@ROCKY1 ~]for disk in c e f; do pvremove /dev/sd$disk; done
+[root@ROCKY1 ~]for disk in c e f; do pvremove /dev/xvd$disk; done
 
-Labels on physical volume "/dev/sdc" successfully wiped.
-Labels on physical volume "/dev/sde" successfully wiped.
-Labels on physical volume "/dev/sdf" successfully wiped.
+Labels on physical volume "/dev/xvdc" successfully wiped.
+Labels on physical volume "/dev/xvde" successfully wiped.
+Labels on physical volume "/dev/xvdf" successfully wiped.
 ```
 
 Use your `pvs;vgs;lvs` commands to verify those volumes no longer exist.
@@ -336,11 +342,11 @@ be limiting show commands from here on out, please use pvs,vgs,lvs often for
 your own understanding)
 
 ```bash
-[root@ROCKY1 ~]for disk in c e f; do pvcreate /dev/sd$disk; done
-Physical volume "/dev/sdc" successfully created.
-Physical volume "/dev/sde" successfully created.
-Physical volume "/dev/sdf" successfully created.
-vgcreate VolGroupTest /dev/sdc /dev/sde /dev/sdf
+[root@ROCKY1 ~]for disk in c e f; do pvcreate /dev/xvd$disk; done
+Physical volume "/dev/xvdc" successfully created.
+Physical volume "/dev/xvde" successfully created.
+Physical volume "/dev/xvdf" successfully created.
+vgcreate VolGroupTest /dev/xvdc /dev/xvde /dev/xvdf
 lvcreate -l +100%FREE --type raid5 -n lv_test VolGroupTest
 mkfs.xfs /dev/mapper/VolGroupTest-lv_test
 
@@ -393,10 +399,10 @@ Logical volume "lv_test" successfully removed
 [root@ROCKY1 ~]vgremove VolGroupTest
 Volume group "VolGroupTest" successfully removed
 
-[root@ROCKY1 ~]for disk in c e f; do pvremove /dev/sd$disk; done
-Labels on physical volume "/dev/sdc" successfully wiped.
-Labels on physical volume "/dev/sde" successfully wiped.
-Labels on physical volume "/dev/sdf" successfully wiped.
+[root@ROCKY1 ~]for disk in c e f; do pvremove /dev/xvd$disk; done
+Labels on physical volume "/dev/xvdc" successfully wiped.
+Labels on physical volume "/dev/xvde" successfully wiped.
+Labels on physical volume "/dev/xvdf" successfully wiped.
 ```
 
 #### Working with MDADM as another RAID option:
@@ -412,7 +418,7 @@ May have to install mdadm yum: yum install mdadm
 #### Create a raid5 with MDADM:
 
 ```bash
-[root@ROCKY1 ~]mdadm --create -l raid5 /dev/md0 -n 3 /dev/sdc /dev/sde /dev/sdf
+[root@ROCKY1 ~]mdadm --create -l raid5 /dev/md0 -n 3 /dev/xvdc /dev/xvde /dev/xvdf
 
 mdadm: Defaulting to version 1.2 metadata
 mdadm: array /dev/md0 started.

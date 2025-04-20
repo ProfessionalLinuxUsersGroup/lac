@@ -77,40 +77,44 @@ The discussion posts are done in Discord threads. Click the 'Threads' icon on th
 
 - [Link to Discussion Post 2](https://discord.com/channels/611027490848374811/1320140864303140916)
 
-### Start thinking about your project ideas (more to come in future weeks):
-
-Topics:
-
-1. System Stability
-2. System Performance
-3. System Security
-4. System monitoring
-5. Kubernetes
-6. Programming/Automation
-
-You will research, design, deploy, and document a system that improves your administration of Linux systems in some way.
-
 ## Definitions
 
 ---
 
 Incident:
+
 Problem:
+
 FMEA:
+
 Six Sigma:
+
 TQM:
+
 Post Mortem:
+
 Scientific Method:
+
 Iterative:
+
 Discrete data:
+
 Ordinal:
+
 Nominal (binary – attribute):
+
 Continuous data:
+
 Risk Priority Number (RPN):
+
 5 Whys:
+
 Fishbone Diagram (Ishikawa):
+
 Fault Tree Analysis (FTA):
+
 PDCA:
+
 SIPOC:
 
 ## Digging Deeper

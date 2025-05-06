@@ -41,10 +41,10 @@ Exercises (Warmup to quickly run through your system and practice commands)
 4. `cat /etc/passwd | tail -5`
    - What did this do to the output of the file?
 5. `cat /etc/passwd | tail -5 | nl`
-6. `cat /etc/passwd | tail -5 | awk -F : ‘{print $1, $3, $7}'`
+6. `cat /etc/passwd | tail -5 | awk -F : '{print $1, $3, $7}'`
    - What did that do and what do each of the `$#` represent?
    - Can you give the 2nd, 5th, and 6th fields?
-7. `cat /etc/passwd | tail -5 | awk -F : ‘{print $NF}'`
+7. `cat /etc/passwd | tail -5 | awk -F : '{print $NF}'`
    - What does this `$NF` mean? Why might this be useful to us as administrators?
 8. `alias`
    - Look at the things you have aliased.

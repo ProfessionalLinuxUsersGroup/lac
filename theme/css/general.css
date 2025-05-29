@@ -285,3 +285,6 @@ sup {
   align-items: center;
   gap: 20px;
 }
+pre, code {
+    white-space: pre-wrap;
+}

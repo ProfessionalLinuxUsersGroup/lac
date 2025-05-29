@@ -35,16 +35,14 @@ Below is the current workflow that deploys the Git Page for the course:
 To achieve this deployment locally the following environment and dependencies are
 required:
 
-<dl>
-    <dt>1. A localhost, this could be a container, virtual machine, or local machine</dt>
-    <dt>2. The following packages installed on such machine:</dt>
-    <dd>- httpd or apache</dd>
-    <dd>- git</dd>
-    <dd>- gcc</dd>
-    <dd>- rust</dd>
-    <dd>- cargo</dd>
-    <dt>3. And a clone of a ProLUG repository</dt>
-</dl>
+1. A localhost, this could be a container, virtual machine, or local machine
+2. The following packages installed on such machine:
+   - httpd or apache
+   - git
+   - gcc
+   - rust
+   - cargo
+3. And a clone of a ProLUG repository
 
 ## Building, Deploying, and Developing Locally
 
@@ -64,8 +62,7 @@ If you don't know the requirements to administer a machine via Ansible documenta
 has been provided below.
 
 <div class = warning>
-This playbook will need to be modified based on which distribution or package management
-tool is configured.
+This playbook attempts to install and initialize dependencies based on APT and DNF package managers only.
 </div>
 
 Getting started with Ansible:  
@@ -95,32 +92,35 @@ Tested with Rocky 9 and Ubuntu 24.04 Containers.
 APT frontends:
 
 ```bash
-#!/usr/bin/env bash
+#!/bin/bash
 apt-get update
 apt-get -y install apache2 git gcc rustc-1.80 cargo-1.80
-cargo-1.80 install --locked mdbook
-systemctl enable apache2 && systemctl start apache2
+cargo-1.80 install --locked mdbook@0.4.48
+systemctl enable --now apache2
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/lac
-echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.profile
-export PATH=$PATH:~/.cargo/bin/ && echo $PATH
-cd ~/lac && mdbook build -d /var/www/html
+echo 'PATH=$PATH:$HOME/.cargo/bin/' | tee -a $HOME/.profile
+export PATH=$PATH:$HOME/.cargo/bin/ && echo $PATH | grep cargo
+cd $HOME/lac && mdbook build -d /var/www/html
 systemctl restart apache2
 ```
 
 DNF frontends:
 
 ```bash
-#!/usr/bin/env bash
+#!/bin/bash
 dnf update
 dnf install -y httpd git gcc rust cargo
-cargo install --locked mdbook
-systemctl enable httpd && systemctl start httpd
+cargo install --locked mdbook@0.4.48
+systemctl enable --now httpd
 cd && git clone https://github.com/ProfessionalLinuxUsersGroup/lac
-echo 'PATH=$PATH:~/.cargo/bin/' | tee -a ~/.bash_profile
-export PATH=$PATH:~/.cargo/bin/ && echo $PATH
-cd ~/lac && mdbook build -d /var/www/html
+echo 'PATH=$PATH:$HOME/.cargo/bin/' | tee -a $HOME/.bash_profile
+export PATH=$PATH:$HOME/.cargo/bin/ && echo $PATH | grep cargo
+cd $HOME/lac && mdbook build -d /var/www/html
 systemctl restart httpd
 ```
+
+The ProLUG Linux Administration Course website should now be available from your
+web browser either at http://localhost or its designated IP address.
 
 #### From here you can use such commands from your localhost to implement changes:
 
@@ -143,14 +143,14 @@ these commands will need to utilize absolute paths.
 
 ```bash
 scp {working directory}/{targeted document} {TARGET_IP}:/root/lac/src/{targeted document}
-ssh {TARGET_IP} "cd /root/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh {TARGET_IP} "cd /root/lac && /root/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 An example of the workflow after making changes:
 
 ```bash
 scp src/development.md 172.16.15.8:/root/lac/src/
-ssh 172.16.15.8 "cd /root/lac && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh 172.16.15.8 "cd /root/lac && /root/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 <img src="./assets/images/flow.png"></img>

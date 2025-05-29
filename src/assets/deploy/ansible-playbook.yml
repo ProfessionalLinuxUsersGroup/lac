@@ -1,54 +1,77 @@
 ---
-- name: Deploy local ProLUG mdBook dev page to rocky container
-  hosts: { host }
-  gather_facts: false
+- name: Deploy local ProLUG mdBook dev page machine/container
+  hosts: # change targeted host/hosts here
   become: true
+  gather_facts: true
 
   tasks:
-    - name: Install dependencies
-      ansible.builtin.package:
-        update_cache: true
-        name:
-          - { httpd or apache2 }
-          - git
-          - gcc
-          - rust
-          - cargo
-        state: present
+    - name: Build ProLUG website for DNF Systems
+      when: ansible_pkg_mgr == "dnf"
+      block:
+        - name: Install and initialize dependencies
+          ansible.builtin.package:
+            update_cache: true
+            name:
+              - httpd
+              - git
+              - gcc
+              - rust
+              - cargo
+            state: present
 
-    - name: Enable httpd or apache2
-      ansible.builtin.service:
-        name: { httpd or apache2 }
-        enabled: true
+        - name: Initialize httpd
+          ansible.builtin.service:
+            name: httpd
+            state: started
+            enabled: true
 
-    - name: Installing mdbook
-      community.general.cargo:
-        name: mdbook
-        locked: true
-        state: present
+        - name: DNF - Installing mdbook
+          community.general.cargo:
+            name: mdbook
+            locked: true
+            state: present
+
+    - name: Build ProLUG website LAC for APT systems
+      when: ansible_pkg_mgr == "apt"
+      block:
+        - name: Install dependencies apt
+          ansible.builtin.package:
+            update_cache: true
+            name:
+              - apache2
+              - git
+              - gcc
+              - rustc-1.80
+              - cargo-1.80
+            state: present
+
+        - name: Initialize apache2
+          ansible.builtin.service:
+            name: apache2
+            state: started
+            enabled: true
+
+        - name: APT - Installing mdbook
+          ansible.builtin.command:
+            argv:
+              - /usr/bin/cargo-1.80
+              - install
+              - --locked
+              - mdbook@0.4.48
 
     - name: Verifying presence of ProLUG repo
       ansible.builtin.command: ls /root/lac/
       register: contents_git
       ignore_errors: true
 
-    - name: Clone down ProLUG repo if absent
+    - name: Cloning down ProLUG repo
       ansible.builtin.git:
         repo: "https://github.com/ProfessionalLinuxUsersGroup/lac"
         dest: /root/lac/
         clone: true
       when: contents_git.stdout == ""
 
-    - name: Verify absent httpd configuration
-      ansible.builtin.command: ls /var/www/html/
-      register: contents_httpd
-
-    - name: Checking /var/www/html not empty
-      ansible.builtin.debug:
-        msg: "httpd /html not empty, verify content"
-      when: contents_httpd.stdout != ""
-
-    - name: Builing mdbook if /html empty
+    - name: DNF - Building mdbook
       ansible.builtin.command:
         chdir: /root/lac
         argv:
@@ -56,11 +79,26 @@
           - build
           - --dest-dir
           - /var/www/html
-      when: contents_httpd.stdout == ""
-      notify: Restart httpd or apache2
+      when: ansible_pkg_mgr == "dnf"
+      notify: Restart httpd
+
+    - name: APT - Building mdbook
+      ansible.builtin.command:
+        chdir: /root/lac
+        argv:
+          - /root/.cargo/bin/mdbook
+          - build
+          - --dest-dir
+          - /var/www/html
+      when: ansible_pkg_mgr == "apt"
+      notify: Restart apache2
 
   handlers:
-    - name: Restart httpd or apache2
+    - name: Restart httpd
       ansible.builtin.service:
-        name: { httpd or apache2 }
+        name: httpd
+        state: restarted
+    - name: Restart apache2
+      ansible.builtin.service:
+        name: apache2
         state: restarted

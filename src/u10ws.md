@@ -156,9 +156,11 @@ Topics:
 ---
 
 1. Build a custom container and deploy it in Kubernetes securely.
+
 2. Read about container security:
    - [Docker Security Best Practices](https://docs.docker.com/build/building/best-practices/)
    - [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
+
 3. Complete this Kubernetes security lab:
    - [KillerShell Kubernetes Security](https://killercoda.com/killer-shell-cks/scenario/static-manual-analysis-k8s)
 

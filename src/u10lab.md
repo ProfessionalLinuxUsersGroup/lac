@@ -207,23 +207,6 @@ journalctl -xeu k3s
 - What errors appear in the logs?
 - Does restarting resolve the issue?
 
-## Reflection and Additional Challenges
-
-1. Deploy your own container:
-
-   - Build a custom Docker container and deploy it in the cluster.
-   - Ensure it’s secure and scalable.
-
-2. Read about securing Kubernetes deployments:
-
-   - [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/)
-   - [Docker Security Best Practices](https://docs.docker.com/build/building/best-practices/)
-
-3. Secure Kubernetes in Practice:
-
-   - Try this security lab:  
-      [Killercoda Kubernetes Security](https://killercoda.com/killer-shell-cks/scenario/static-manual-analysis-k8s)
-
 ## Conclusion
 
 ---

@@ -270,7 +270,7 @@ We will not draw them out in this lab, as there are already well-documented exam
 
 When we start thinking about how to lay something out and logically work through it, the idea of a formalized flow chart can help us get a handle on what we're seeing.
 
-ome common symbols you'll see as we go through drawing out our logic. This example creates a loop in the program until some decision evaluates to yes (true).
+Some common symbols you'll see as we go through drawing out our logic. This example creates a loop in the program until some decision evaluates to yes (true).
 
 ### 2.8 - 3 Types of Decisions
 

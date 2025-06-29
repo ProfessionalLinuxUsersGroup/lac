@@ -304,7 +304,7 @@ work
    mkdir /project
    ls -ld /project
    chown root:project /project
-   cmod 775 /project
+   chmod 775 /project
    ls -ld /project
    ```
 

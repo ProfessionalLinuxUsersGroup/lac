@@ -65,7 +65,7 @@ Scenario:
 <blockquote>
 
 You are in a capacity planning meeting with a few of the architects.
-They have decided to add 2 more agents to your Linus sytems, Bacula Agent and an Avamar Agent.
+They have decided to add 2 more agents to your Linux systems, a Bacula Agent and an Avamar Agent.
 They expect these agents to run their work starting at 0400 every morning.
 
 </blockquote>
@@ -85,8 +85,8 @@ Scenario:
 
 <blockquote>
 
-Your team has recently tested at proof of concept of a new
-storage system. The vendor has published the blazing fast speeds that are capable of being
+Your team has recently tested at proof of concept of a new storage system. 
+The vendor has published the blazing fast speeds that are capable of being
 run through this storage system. You have a set of systems connected to both the old
 storage system and the new storage system.
 

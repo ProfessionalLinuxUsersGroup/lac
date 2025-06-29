@@ -218,19 +218,19 @@ issues. No one cares what you think, they care what you can show, or prove.
     ```
 
 - Can we say that this system is not under heavy load?
-- What does a system under no load look like permorning tasks in our environment?
+- What does a system under no load look like performing tasks in our environment?
 
-  - Assuming our systems are running not under load, capture SAR and baseline stats.
+  - Assuming our systems are not running under load, capture SAR and baseline stats.
   - Perform some basic tasks and get their completion times.
 
     - Writing/deleting 3000 empty files #modify as needed for your system
 
     ```bash
     # Speed: ~10s
-    time for i in `seq 1 3000`; do touch testfile$i; done
+    time (for i in `seq 1 3000`; do touch testfile$i; done)
 
     # Removing them
-    time for i in `seq 1 3000`; do rm -rf testfile$i; done
+    time (for i in `seq 1 3000`; do rm -rf testfile$i; done)
 
     # Writing large files
     for i in `seq 1 5`; do time dd if=/dev/zero of=/root/lab_baseline/sizetest$i bs=1024k count=1000; done
@@ -242,7 +242,7 @@ issues. No one cares what you think, they care what you can show, or prove.
     - Testing processor speed
 
       ```bash
-      time $(i=0; while (( i < 999999 )); do (( i ++ )); done)
+      time ($(i=0; while (( i < 999999 )); do (( i ++ )); done))
       # if this takes your system under 10 seconds, add a 9
       ```
 

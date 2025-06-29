@@ -172,7 +172,7 @@ cat fruits.txt | grep APPLE
 # See if you can figure out how to both ignore case and only find the
 # word apple at the beginning of the line.
 
-# If you can’t, here’s the the answer. Try it:
+# If you can’t, here’s the answer. Try it:
 cat fruits.txt | grep -i "^apple"
 ```
 

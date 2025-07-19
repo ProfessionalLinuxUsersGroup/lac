@@ -51,7 +51,7 @@ online documentation: <https://docs.ansible.com/ansible/latest/inventory_guide/i
 
 </blockquote>
 
-<img src="./assets/images/proluglab.png"></img>
+<img src="./assets/images/u14/u14-dp1-prolug-lab.png"></img>
 
 1. Make an inventory of the servers, grouped any way you like.
 2. What format did you choose to use for your inventory?

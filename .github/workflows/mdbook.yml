@@ -29,52 +29,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MDBOOK_VERSION: 0.4.45
+      MDBOOK_VERSION: v0.4.52
     steps:
       - uses: actions/checkout@v4
 
       - name: Dynamically generate resources.md file
         run: ./scripts/generate_resources.sh
 
-      # Install rust with GitHub's 'setup-rs' action (most recent stable version)
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable # Or specify a version
-          override: true # ensure this version is used globally in the workflow
-          components: cargo
-
-      # Cache rust crates (mdbook dependencies) so reinstalls don't take long
-      - name: Cache the cargo registry and build artifacts
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: cargo-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: cargo-${{ runner.os }}-
-
-      # Cache the mdbook binary so we don't need to install it every time
       - name: Cache mdbook binary
         id: cache-mdbook
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
-          path: ~/.cargo/bin/mdbook
+          path: mdbook
           key: mdbook-${{ runner.os }}-${{ env.MDBOOK_VERSION }}
           restore-keys: mdbook-${{ runner.os }}-
 
-      # Install correct version of mdbook if it's not cached
-      - name: Install mdBook
+      - name: Fetch mdBook binary from mdBook repository if not cached
         if: steps.cache-mdbook.outputs.cache-hit != 'true'
-        run: cargo install --version ${MDBOOK_VERSION} mdbook --force
+        run: |
+          curl -sLO "https://github.com/rust-lang/mdBook/releases/download/${MDBOOK_VERSION}/mdbook-${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+          tar xfz mdbook-${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz
+          rm -f mdbook-${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build with mdBook
-        run: mdbook build
+        run: ./mdbook build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

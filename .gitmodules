@@ -1,0 +1,3 @@
+[submodule "mdbook-resources"]
+	path = mdbook-resources
+	url = git@github.com:ProfessionalLinuxUsersGroup/mdbook-resources.git

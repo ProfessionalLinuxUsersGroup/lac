@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Dynamically generate resources.md file
-        run: ./scripts/generate_resources.sh
+        run: ./mdbook-resources/scripts/generate-resources
 
       - name: Cache mdbook binary
         id: cache-mdbook
@@ -50,7 +50,7 @@ jobs:
 
       - name: Fetch mdBook binary from mdBook repository if not cached
         if: steps.cache-mdbook.outputs.cache-hit != 'true'
-        run: bash ./scripts/binary-validation.sh ${MDBOOK_VERSION}
+        run: ./mdbook-resources/scripts/binary-validation ${MDBOOK_VERSION}
 
       - name: Setup Pages
         id: pages

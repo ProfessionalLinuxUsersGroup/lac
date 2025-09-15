@@ -9,6 +9,11 @@ This book was made possible by a small group of dedicated contributors who worke
 
 The group met weekly to organize efforts, manage contributions, and onboard new volunteers. Using Git for version control and GitHub for project management, they converted existing courseware into Markdown and HTML. The content was then compiled with mdBook into a fast, searchable, multimedia learning resource.
 
+## Lead Authors
+
+- **[Scott Champine](https://www.linkedin.com/in/scottchampine/)**  
+  [GitHub](https://github.com/scottchampine) – Prolug founder, Lead Author, network & security engineer, CISSP, Linux instructor.
+
 ## Organizing Contributors:
 
 - Chris McKee
